@@ -2,9 +2,10 @@ from django.contrib import admin
 from django.utils.translation import ugettext as _
 
 from nmadb_learning import models
+from nmadb_utils import admin as utils
 
 
-class TeacherAdmin(admin.ModelAdmin):
+class TeacherAdmin(utils.ModelAdmin):
     """ Administration for teachers.
     """
 
@@ -21,7 +22,7 @@ class TeacherAdmin(admin.ModelAdmin):
             )
 
 
-class TeachingAdmin(admin.ModelAdmin):
+class TeachingAdmin(utils.ModelAdmin):
     """ Administration for teaching.
     """
 
@@ -50,7 +51,7 @@ class TeachingAdmin(admin.ModelAdmin):
             )
 
 
-class TaskAdmin(admin.ModelAdmin):
+class TaskAdmin(utils.ModelAdmin):
     """ Administration for task.
     """
 
@@ -68,7 +69,7 @@ class TaskAdmin(admin.ModelAdmin):
     filter_horizontal = ('authors',)
 
 
-class SolutionAdmin(admin.ModelAdmin):
+class SolutionAdmin(utils.ModelAdmin):
     """ Administration for solution.
     """
 
