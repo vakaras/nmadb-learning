@@ -50,6 +50,11 @@ class TeachingAdmin(utils.ModelAdmin):
             'leave_date',
             )
 
+    raw_id_fields = (
+            'teacher',
+            'academic',
+            )
+
 
 class TaskAdmin(utils.ModelAdmin):
     """ Administration for task.
